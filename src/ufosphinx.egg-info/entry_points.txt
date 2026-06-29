@@ -1,0 +1,2 @@
+[console_scripts]
+ufo = ufosphinx.cli:main

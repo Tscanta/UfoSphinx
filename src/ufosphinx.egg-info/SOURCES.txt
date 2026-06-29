@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/ufosphinx/__init__.py
+src/ufosphinx/cli.py
+src/ufosphinx.egg-info/PKG-INFO
+src/ufosphinx.egg-info/SOURCES.txt
+src/ufosphinx.egg-info/dependency_links.txt
+src/ufosphinx.egg-info/entry_points.txt
+src/ufosphinx.egg-info/top_level.txt
+src/ufosphinx/compiler/ast_nodes.py
+src/ufosphinx/compiler/engine.py
+src/ufosphinx/compiler/generator.py
+src/ufosphinx/compiler/lexer.py
+src/ufosphinx/compiler/main.py
+src/ufosphinx/compiler/parser.py

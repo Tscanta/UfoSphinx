@@ -8,33 +8,59 @@
 # py ufo.py run examples/hello.ufo
 # ==========================================
 
-import subprocess
 import sys
+import subprocess
 
-from compiler.compiler import Compiler
+from src.ufosphinx.compiler.engine import Compiler
 
 def main():
 
-    if len(sys.argv) < 3:
-        print("Usage:")
-        print("py ufo.py run <file.ufo>")
+    # No arguments were given.
+    if len(sys.argv) < 2:
+        print("ufo <file.ufo>")
+        print("ufo run <file.ufo>")
         return
     
-    command = sys.argv[1]
+    compiler = Compiler() # Creating the compiler
+    
+    first = sys.argv[1]
 
     filename = sys.argv[2]
 
-    compiler = Compiler()
+    # ----------------------------
+    # Shortcut:
+    #
+    # ufo hello.ufo
+    # ----------------------------
+    if first.endswith(".ufo"):
+        filename = first
+        output = compiler.compile(filename)
+        print("Compilation successful!\n")
+        subprocess.run(["python", str(output)])
+        return
 
-    if command == "run":
+    # ----------------------------
+    # Normal command:
+    #
+    # ufo run hello.ufo
+    # ----------------------------
+    if first == "run":
+
+        if len(sys.argv) < 3:
+            print("Missing filename.")
+            return
+
+        filename = sys.argv[2]
+
         output = compiler.compile(filename)
 
         print("Compilation successful!\n")
 
         subprocess.run(["python", str(output)])
 
-    else:
-        print("Unknown command.")
+        return
+    
+    print(f"Unknown command: {first}")
 
 
 if __name__ == "__main__":

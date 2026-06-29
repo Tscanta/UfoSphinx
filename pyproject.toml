@@ -1,0 +1,6 @@
+[project]
+name = "ufosphinx"
+version = "0.5.0"
+
+[project.scripts]
+ufo = "ufosphinx.cli:main"

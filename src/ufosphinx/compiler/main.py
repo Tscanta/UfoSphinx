@@ -2,9 +2,9 @@
 
 import subprocess
 from pathlib import Path
-from lexer import Lexer
-from parser import Parser
-from generator import Generator
+from src.ufosphinx.compiler.lexer import Lexer
+from src.ufosphinx.compiler.parser import Parser
+from src.ufosphinx.compiler.generator import Generator
 
 
 def main():
