@@ -1,20 +1,13 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Virtual Enviaronments 
-.venv/
-venv/
+*.py[cod]
 
 # VS Code
 .vscode/
 
 # Generated files
 output/
-build/
 
-# OS
-.DS_Store
-Thumbs.db
+# Virtual environments
+.venv/
+venv/
