@@ -1,3 +1,5 @@
+# VERSION 0.3
+
 import subprocess
 from pathlib import Path
 from lexer import Lexer

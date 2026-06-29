@@ -1,7 +1,7 @@
 # The generator takes the AST (Abstract Syntax Tree)
 # and converts it into valid Python code.
 
-from ast_nodes import AssignmentNode, PrintNode
+from .ast_nodes import AssignmentNode, PrintNode
 
 class Generator:
     def generate(self, ast):

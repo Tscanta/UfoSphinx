@@ -1,6 +1,6 @@
 # The parser understands commands.
 
-from ast_nodes import AssignmentNode, PrintNode
+from .ast_nodes import AssignmentNode, PrintNode
 
 class Parser:
 
